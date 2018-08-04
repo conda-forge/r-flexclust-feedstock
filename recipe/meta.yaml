@@ -15,7 +15,8 @@ source:
   sha256: 7bbbb63bcf3aca81d8f6cafd674c9cc25dcea0a1b320c405b07cac99ccf32ff5
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
 
   rpaths:
@@ -24,18 +25,18 @@ build:
 
 requirements:
   build:
+    - posix                # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+  host:
     - r-base
     - r-lattice
     - r-modeltools
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
 
   run:
     - r-base
     - r-lattice
     - r-modeltools
-    - libgcc  # [not win]
 
 test:
   commands:
