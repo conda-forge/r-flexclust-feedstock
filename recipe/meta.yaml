@@ -47,7 +47,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=flexclust
-  license: GPL-2
+  license: GPL-2.0-only
   summary: The main function kcca implements a general framework for k-centroids cluster analysis
     supporting arbitrary distance measures and centroid computation. Further cluster
     methods include hard competitive learning, neural gas, and QT clustering. There
