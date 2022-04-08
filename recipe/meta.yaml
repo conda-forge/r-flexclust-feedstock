@@ -1,4 +1,4 @@
-{% set version = '1.4-0' %}
+{% set version = "1.4-1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/flexclust_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/flexclust/flexclust_{{ version }}.tar.gz
-  sha256: 82fe445075a795c724644864c7ee803c5dd332a89ea9e6ccf7cd1ae2d1ecfc74
+  sha256: d67977df059e622832358069509f8968d506074320a45d34bfd21c65f898538d
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -48,14 +48,10 @@ test:
 about:
   home: https://CRAN.R-project.org/package=flexclust
   license: GPL-2.0-only
-  summary: The main function kcca implements a general framework for k-centroids cluster analysis
-    supporting arbitrary distance measures and centroid computation. Further cluster
-    methods include hard competitive learning, neural gas, and QT clustering. There
-    are numerous visualization methods for cluster results (neighborhood graphs, convex
-    cluster hulls, barcharts of centroids, ...), and bootstrap methods for the analysis
-    of cluster stability.
+  summary: The main function kcca implements a general framework for k-centroids cluster analysis supporting arbitrary distance measures and centroid computation. Further cluster methods include hard competitive learning, neural gas, and QT clustering. There are numerous visualization methods for cluster results (neighborhood
+    graphs, convex cluster hulls, barcharts of centroids, ...), and bootstrap methods for the analysis of cluster stability.
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
