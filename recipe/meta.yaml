@@ -1,6 +1,5 @@
 {% set version = "1.4-2" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-flexclust
@@ -13,8 +12,7 @@ source:
   sha256: 0c4720d691e36091cedafa26ee1f0ddc7af931168096df00b9bf6d64fdd35a55
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -37,7 +35,6 @@ requirements:
     - r-modeltools
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-class
     - r-lattice
     - r-modeltools
