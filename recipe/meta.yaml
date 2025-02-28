@@ -1,4 +1,4 @@
-{% set version = "1.4-2" %}
+{% set version = "1.5.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/flexclust_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/flexclust/flexclust_{{ version }}.tar.gz
-  sha256: 0c4720d691e36091cedafa26ee1f0ddc7af931168096df00b9bf6d64fdd35a55
+  sha256: f0fb5f2c338b5b4d310cdbe6b55b7e49d3ffc625002390a145dd5abd2f495fa3
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
