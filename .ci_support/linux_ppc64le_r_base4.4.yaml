@@ -6,8 +6,6 @@ c_stdlib:
 - sysroot
 c_stdlib_version:
 - '2.17'
-cdt_name:
-- conda
 channel_sources:
 - conda-forge
 channel_targets:
@@ -15,7 +13,7 @@ channel_targets:
 cran_mirror:
 - https://cran.r-project.org
 docker_image:
-- quay.io/condaforge/linux-anvil-ppc64le:alma9
+- quay.io/condaforge/linux-anvil-ppc64le:alma10
 pin_run_as_build:
   r-base:
     min_pin: x.x
